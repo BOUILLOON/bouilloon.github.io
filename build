@@ -3,7 +3,7 @@
 cd /workspaces/bouilloon.github.io/
 git add -A
 #repo privé
-read -p "Nom du commit SOURCES: " sources
+read -p "Nom du commit PRIV_SOURCES: (default: updating private sources) " sources
 if [[ -z $sources ]]; then
 	sources="updating private sources"
 fi
@@ -20,7 +20,7 @@ cp -rf /workspaces/bouilloon.github.io/_site/* .
 git add -A
 
 # repo public
-read -p "Nom du commit SITE_STATIQUE: " static
+read -p "Nom du commit PUBLIC_STATIQUE: (default: updating static sources) " static
 if [[ -z $static ]]; then
 	static="updating static sources"
 fi
