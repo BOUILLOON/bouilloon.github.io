@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp -rf /workspaces/bouilloon.github.io/_site/* .
+git add -A 
+git commit -m "Update"
+git push 

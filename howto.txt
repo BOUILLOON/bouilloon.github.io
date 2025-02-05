@@ -1,0 +1,16 @@
+Dans ce répértoire (sources) tu fais
+ 
+git add -A
+git commit -m "le nom de ton commit"
+> ex: git commit -m "Update sidebar"
+git push
+
+La tu viens de push les sources sur le repo chirpy-sources/
+Maintenant il faut que tu push la partie "static" qui sera sur le repo bouilloon.github.io
+pour ca tu fais
+
+make ../static
+
+ca copie juste les fichiers du dossiers _site
+les fichiers sont update dans ce dossier quand tu lances le serveur de prod (jekyll jsp quoi)
+donc si t'as pas lancé le serveur de dev les fichiers seront pas update dans _site
