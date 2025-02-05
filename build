@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Update static website by building sources
+cd ../bouilloon.github.io && bundle exec jekyll build && cd ../static
+# Copy built sources
 cp -rf /workspaces/bouilloon.github.io/_site/* .
+# Push to git
 git add -A 
 git commit -m "Update"
 git push 
