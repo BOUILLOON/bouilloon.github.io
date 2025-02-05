@@ -2,7 +2,12 @@
 
 cd /workspaces/bouilloon.github.io/
 git add -A
+#repo privé
 read -p "Nom du commit SOURCES: " sources
+if [[ -z $sources ]]; then
+	sources="updating private sources"
+fi
+
 git commit -m "$sources"
 git push
 
@@ -14,6 +19,10 @@ cp -rf /workspaces/bouilloon.github.io/_site/* .
 # Push to git
 git add -A
 
+# repo public
 read -p "Nom du commit SITE_STATIQUE: " static
+if [[ -z $static ]]; then
+	static="updating static sources"
+fi
 git commit -m "$static"
 git push
